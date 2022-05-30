@@ -4,39 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <style>
-
       #navbar{
-        margin-left: 500px;
+        display: flex;
+        border: 1px solid black;
+        padding: 20px;
+        flex-direction:row-reverse ;
+        background-color: aqua;
+      }
+      #navbar > div{
+        margin: 10px;
+        padding: 5px;
+      }
+      #menu{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap : 20px;
+        margin: 10px;
+        
+      }
+      #add_to_bucket{
+        width: 150px;
+        height: 20px;
       }
 
-      #type{
-        width: 30%;
-        height: 20px;
-      }
-      #desc{
-        width: 30%;
-        height: 20px;
-      }
-      #price{
-        width: 30%;
-        height: 20px;
-      }
-      #image{
-        width: 30%;
-        height: 20px;
-      }
-      h2{
-        margin-left: 500px;
-      }
-      #products{
-        margin-left: 500px;
-      }
-      #add_product{
-        width: 31%;
-        height: 20px;
-      }
+
 
 
     </style>
@@ -44,28 +37,26 @@
 
   <body>
     <div id="navbar">
-
-      <button id="show_products">Show product</button>
-      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+      
+      
+     
+      
+      <!--Add navbar divs here-->
+      <!-- Link to bucket.html -->
+      <div id="coffee_count">
+        0
+        <!--Show total number of coffee added to bucket here, do not add anything only Total count. Not even "Count - 5" but like this "5" -->
+      </div>
+      <div ><a id="go_to_bucket" href="bucket.html">Bucket</a></div>
+      <div>Item</div>
+      <div>Sign-Up</div>
+      <div>Login</div>
     </div>
-    <div>
-      <h2>Add Products</h2>
-      <!--Create a form here to accept product data from user, give form HTML id as "products"-->
 
-      <!--Create four inputs to accept Type, Description, price, & image-->
-      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
-      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
-      <form id="products">
-
-        <input type="text" id="type" placeholder="Type"> <br><br>
-        <input type="text"  id="desc" placeholder="Description"><br><br>
-        <input type="number"  id="price" placeholder="Price"><br><br>
-        <input type="url"  id="image" placeholder="Image"><br><br>
-       
-        <button id="add_product">Add To Products</button>
-
-
-      </form>
+    <div id="menu">
+      <!--Show coffee list here in grid format-->
+      <!-- add an add to bucket button to each item, give it HTML id as 'add_to_bucket' -->
+      
     </div>
   </body>
 </html>
